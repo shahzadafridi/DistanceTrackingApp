@@ -13,6 +13,8 @@ Activity Recognition gives our Android device the ability to detect a number of 
 
 ![Image 2](https://lh3.googleusercontent.com/TVB2EACwbUTX2aGUQI55tw6WP_3TRtKYS2STEouDn41R9BzTIFkpAC4xnNlO5wYOvMdQPdlWTyw9M0B-jFAoofXym2BOB2kxHCcgL649SHDm1txjdAnPW52iY24ir8kTiyNfh4AjxzvtOSmRNZssFurq4slmFpzZYCuYun9zRnoIH_eOnXPN3nAa_LEmk2A9X6s2UpEULU0mLmkjRsSJgeKrZ9FxDZF_t2hB09LJsMLuSLm47JwQRDgKMOD936xMCqS9mMxRSjYPX8Wf9QIHQ4RUBkwA7K0BXztPzYwKvgftrCudRaBxGbZ3th0e6mZzCWIRh7ZqP8L8vEoO1lf4TAmsyzUk0hzbRR3kL_18pZnuQcQ0T3XyWPxhkJfGsAO9vaKt0uZy52U6241ZPYaA7gVXYmO-QzSLRCyzT5zggR7HXPeNjsbmQdTUzt6a3X3-LVPvfnvBd4K98b27zs-W2YpY0YBxRRlHyaA8GhZKD_celATpdCigmRMHT9AV4n4hnfwUDpeTU5soyGYoJ0w4WB9Ox1-pESpHMJWzcsZU7JgGNEOBQIDXIy-zyydvwW9OESOs-OF-qrCE53Mem52dWdJqtrvs1BuBfJXIV9cJwLLWo6Kjd5DOgb-tbIwxm_SF5DRUaQTDYihub4xfePt--lXHt53tm7A=w444-h888-no "Title")
 
+In the notification you can see event. Event indicates activity recognition and update according the changes in activity recognition such as walk, running, driving etc.
+
 ## Contact
 
  - Email:     shahzadahmadafridi@gmail.com 
