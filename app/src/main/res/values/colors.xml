@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <!--Appthem2-->
+    <color name="colorPrimary2">#FF8F00</color>
+    <color name="colorPrimaryDark2">#FF6F00</color>
+    <color name="colorAccent2">#D81B60</color>
+
+    <color name="backgroundCol">#fff</color>
+
+    <!--SoundCloudColorScheme-->
+    <color name="testCloud">#f50</color>
+    <color name="testText">#333</color>
+    <color name="testBlack">#111</color>
+    <color name="testWhite">#fff</color>
+
+    <color name="Smashed_Pumpkin">#ff7700</color>
+    <color name="orange">#ff5500</color>
+    <color name="Portland_Orange">#ff4B00</color>
+    <color name="Deep_Saffron">#ff3300</color>
+    <color name="Coral_Red">#ff3801</color>
+    <color name="Misty_Rose">#FFE9E1</color>
+    <color name="text">#1b1b1b</color>
+
+    <color name="careem_green_color">#ed0eaf0b</color>
+    <color name="careem_red">#ff3300</color>
+
+    <color name="online">#f50</color>
+    <color name="offline">#b3b3b3</color>
+
+    <color name="color">#ECB106</color>
+    <color name="duskYellow">#FFEB3B</color>
+
+
+</resources>

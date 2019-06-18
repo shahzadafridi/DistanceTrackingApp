@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/testCloud"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="0.4"
+        android:src="@drawable/ic_drive_eta_black_24dp" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2.1"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/km_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sanomat_medium"
+            android:gravity="center"
+            android:text="0.00 km"
+            android:textColor="@android:color/white"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/address_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sanomat_regular"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            android:text="  loading..."
+            android:textColor="@android:color/white"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/time_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                android:fontFamily="@font/sanomat_regular"
+                android:gravity="center"
+                android:text="  1 hr 28 min"
+                android:textColor="#fff"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/activityStatus_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/sanomat_regular"
+                android:gravity="center"
+                android:text="  1 hr 28 min"
+                android:textColor="#fff"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.14"/>
+
+
+    <ImageView
+        android:id="@+id/return_notification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.35"
+        android:src="@drawable/ic_keyboard_return_black_24dp" />
+
+
+</LinearLayout>

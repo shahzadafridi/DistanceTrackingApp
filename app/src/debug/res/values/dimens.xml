@@ -1,0 +1,36 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">5dp</dimen>
+    <dimen name="nav_header_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--Headling tags-->
+    <dimen name="h1">42dp</dimen>
+    <dimen name="h2">32dp</dimen>
+    <dimen name="h3">25dp</dimen>
+    <dimen name="h4">21dp</dimen>
+    <dimen name="h5">17dp</dimen>
+    <dimen name="h6">16dp</dimen>
+
+    <!--Navigation Drawer-->
+    <!--nav_header_main-->
+    <dimen name="nav_header_main_horizontal_margin">40dp</dimen>
+    <dimen name="nav_header_main_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_main_name_vertical_margin">25dp</dimen>
+    <dimen name="nav_header_main_subtitle_vertical_margin">10dp</dimen>
+    <!--custom_drawer_list-->
+    <dimen name="custom_drawer_list_padding">10dp</dimen>
+    <dimen name="custom_drawer_list_left_margin">15dp</dimen>
+    <dimen name="custom_drawer_list_right_margin">5dp</dimen>
+
+    <!--Create Compaign 2-->
+
+    <dimen name="car_plus_marginLeft">30dp</dimen>
+
+
+    <dimen name="layout_padding">20dp</dimen>
+    <dimen name="textview_margin">10dp</dimen>
+
+</resources>

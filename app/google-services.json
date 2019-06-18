@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "780612809572",
+    "firebase_url": "https://distancetrackingapp.firebaseio.com",
+    "project_id": "distancetrackingapp",
+    "storage_bucket": "distancetrackingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780612809572:android:4571a717893a4289",
+        "android_client_info": {
+          "package_name": "binarysole.c.distancetrackingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780612809572-c1spcjbe5meusilqqfj25a1uun7nlm8a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "binarysole.c.distancetrackingapp",
+            "certificate_hash": "14142265d6148f62a926768734c9a26c6f348afe"
+          }
+        },
+        {
+          "client_id": "780612809572-dqirekteveft9vl3sa53k6bfo32nhkoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQMRTNW4fgWWSyPT4oCr84NNx1i4Mv9NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780612809572-dqirekteveft9vl3sa53k6bfo32nhkoc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">DistanceTrackingApp</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="track">Track Activity</string>
+    <string name="percentage">%1$d%%</string>
+    <string name="bicycle">On a bicycle</string>
+    <string name="foot">On foot</string>
+    <string name="running">Running</string>
+    <string name="still">Still</string>
+    <string name="tilting">Tilting</string>
+    <string name="unknown_activity">Unknown activity</string>
+    <string name="vehicle">In a vehicle</string>
+    <string name="walking">Walking</string>
+
+    <!--BroadcastReciever actins-->
+    <string name="user_state">binarysole.c.distancetrackingapp.ActivityRecognition</string>
+    <string name="network_state">android.net.conn.CONNECTIVITY_CHANGE</string>
+    <string name="location_state">binarysole.c.distancetrackingapp.LocationService</string>
+    <string name="network_state_change">network_state_change</string>
+    <string name="location_state_change">location_state_change</string>
+    <string name="user_state_change">user_state_change</string>
+
+
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+
+<TextView
+    android:id="@+id/campaign_map_title"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#FF5500"
+    android:fontFamily="@font/sanomat_regular"
+    android:paddingLeft="5dp"
+    android:gravity="center_vertical|center_horizontal"
+    android:text="CAMPAIGN MAP"
+    android:textColor="#fff"
+    android:textSize="@dimen/h4"
+    android:textStyle="bold" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/campaign_map_title">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <include
+        layout="@layout/driver_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <include
+        layout="@layout/time_and_km_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_alignParentTop="true"/>
+
+</RelativeLayout>
+
+</RelativeLayout>
