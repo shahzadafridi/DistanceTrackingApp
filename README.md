@@ -10,7 +10,7 @@ Activity Recognition gives our Android device the ability to detect a number of 
 
 ## Demo
 ![
-](https://picasaweb.google.com/102683927275827846395/6703974223737829041#6703974225347008098 "SC 1")
+](https://photos.app.goo.gl/Cj4A2gK3qWKksZRp9 "SC 1")
 
 ## Contact
 
