@@ -9,8 +9,7 @@ Foreground service is used to get location even if the application is minimize o
 Activity Recognition gives our Android device the ability to detect a number of our physical activities like walking, riding a bicycle, driving a car or standing idle. All that can be detected by simply using an API to access [Google Play Services](http://developer.android.com/google/play-services/index.html), an increasingly crucial piece of software available to all Android versions.
 
 ## Demo
-![
-](https://photos.app.goo.gl/Cj4A2gK3qWKksZRp9 "SC 1")
+![Alt text](https://photos.app.goo.gl/Dw1GMDxymkjq19qm7 "Title")
 
 ## Contact
 
