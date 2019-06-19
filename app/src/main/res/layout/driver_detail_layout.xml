@@ -19,7 +19,7 @@
             android:layout_weight="1"
             android:background="@color/online"
             android:fontFamily="@font/sanomat_bold"
-            android:text="ONLINE"
+            android:text="online"
             android:textColor="#fff"
             android:textSize="18dp" />
 

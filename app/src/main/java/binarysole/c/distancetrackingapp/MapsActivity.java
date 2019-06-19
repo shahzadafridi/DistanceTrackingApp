@@ -5,11 +5,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.location.Location;
+import android.os.Handler;
 import android.os.Looper;
+import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.firebase.geofire.GeoFire;
@@ -36,7 +40,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, SharedPreferences.OnSharedPreferenceChangeListener {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, SharedPreferences.OnSharedPreferenceChangeListener, View.OnClickListener {
 
     private GoogleMap mMap;
     FusedLocationProviderClient locationProviderClient, getLastLocationFromLocationProvider;
@@ -53,6 +57,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     TextView kiloTv, timeTv;
     StringBuilder builder;
     private ActivityRecognitionClient mActivityRecognitionClient;
+//StopWatch
+    long MillisecondTime, StartTime, TimeBuff, UpdateTime = 0L ;
+    Handler handler;
+    int Seconds, Minutes, MilliSeconds ;
+    Button onlineOffline;
+    Boolean isOnline = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +74,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
         kiloTv = (TextView) findViewById(R.id.total_distance_campaignMap);
         timeTv = (TextView) findViewById(R.id.travel_time_campaignMap);
+        onlineOffline = (Button) findViewById(R.id.onlineAndOffline_compaignMap);
         locationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         locationRef = FirebaseDatabase.getInstance().getReference().child(LOCATION).child("+923339218035");
         geoFire = new GeoFire(locationRef);
@@ -74,6 +85,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         BroadcastReceiverManager.enableBroadCastReciever(this);
         ActivityRecognitionManager.registerActivityRecognition(this, mActivityRecognitionClient);
         ActivityStackManager.getInstance().startLocationService(MapsActivity.this);
+        handler = new Handler();
+        StartTime = SystemClock.uptimeMillis();
+        handler.postDelayed(runnable, 0);
+        onlineOffline.setOnClickListener(this);
 //        Intent intent = new Intent("binarysole.c.distancetrackingapp.LONGRUNSERVICE1");
 //        intent.setPackage(this.getPackageName());
 //        startService(intent);
@@ -140,6 +155,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             if (meters > 30) { // if meters is above from 30 then add value to firebase.
                                 map.put("Meters", String.valueOf(meters));
                                 kilometers = kilometers + meters / 1000;
+                                if (isOnline)
                                 kiloTv.setText("" + String.format("%.2f", kilometers) + " KM");
                                 map.put("kilometers", String.valueOf(kilometers));
                                 builder.append("[Kilometers:" + kilometers + "],\n");
@@ -158,6 +174,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
 
+        }
+    };
+
+    public Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+
+
+            MillisecondTime = SystemClock.uptimeMillis() - StartTime;
+
+            UpdateTime = TimeBuff + MillisecondTime;
+            Seconds = (int) (UpdateTime / 1000);
+            Minutes = Seconds / 60;
+            Seconds = Seconds % 60;
+            MilliSeconds = (int) (UpdateTime % 1000);
+            timeTv.setText("" + Minutes + ":"
+                    + String.format("%02d", Seconds) + ":"
+                    + String.format("%03d", MilliSeconds));
+            handler.postDelayed(this, 0);
         }
     };
 
@@ -182,12 +217,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             // Receiver was probably already stopped in onPause()
         }
         super.onStop();
+        handler.removeCallbacks(runnable);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 //        unregisterReceiver(broadcastReceiver);
+        TimeBuff += MillisecondTime;
+        handler.removeCallbacks(runnable);
     }
 
 
@@ -211,6 +249,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Log.e(TAG, "User is in vichel");
         } else {
             Log.e(TAG, "User is not in vichel");
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (!isOnline){
+            onlineOffline.setText("Online");
+            onlineOffline.setBackgroundColor(getResources().getColor(R.color.online));
+            StartTime = SystemClock.uptimeMillis();
+            handler.postDelayed(runnable, 0);
+            isOnline = true;
+        }else {
+            onlineOffline.setText("Offline");
+            onlineOffline.setBackgroundColor(getResources().getColor(R.color.offline));
+            handler.removeCallbacks(runnable);
+            isOnline = false;
         }
     }
 }
